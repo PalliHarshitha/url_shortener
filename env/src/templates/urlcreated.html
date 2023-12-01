@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+    <div class="alert alert-primary" role="alert">
+        <h1>Your Short URL: "domain.com/{{ chars }}"</h1>
+    </div>
+
+    <div id="short-url-box" style="display: none;">
+        <button class="btn btn-info" id="copy-btn">Copy to Clipboard</button>
+    </div>
+
+    <div>
+        <p>       </p>
+    </div>
+
+    <div>
+        <span>
+            <a href="/create/"><button type="button" class="btn btn-dark">Create New URL</button></a>
+        </span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var shortUrlBox = document.getElementById('short-url-box');
+            var shortUrlAlert = document.getElementById('short-url-alert');
+            var copyBtn = document.getElementById('copy-btn');
+    
+            // Check if the short URL is available in the template
+            var shortUrl = "domain.com/{{ chars }}"; // Replace with the actual variable name
+    
+            if (shortUrl) {
+                // Display the short URL box
+                shortUrlBox.style.display = 'block';
+    
+                // Add copy-to-clipboard functionality
+                copyBtn.addEventListener('click', function () {
+                    var textArea = document.createElement('textarea');
+                    textArea.value = shortUrl;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+    
+                    // Provide feedback to the user (optional)
+                    alert('Copied to clipboard!');
+                });
+            }
+        });
+    </script>
+
+        
+</center>
+{% endblock content %}
