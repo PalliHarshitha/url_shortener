@@ -4,14 +4,6 @@
 
 <div class="container">
     <form method="POST" action="/create/" class="my-form">
-        <!-- <div class="row">
-            <div class="col-25">
-                <label for="org_url">Original URL</label>
-            </div>
-            <div class="col-75">
-                <input type="text" id="org_url" name="org_url" placeholder="Enter original url..">
-            </div>
-        </div> -->
         {% csrf_token %}
         {{ form.as_p }}
         <center><button type="submit" class="btn btn-success my-btn">Create URL</button></center>
