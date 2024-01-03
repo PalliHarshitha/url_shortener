@@ -6,7 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Url Shortener</title>
 
-    <link rel="stylesheet" type="text/css" href="base.css">
+    <style>
+        *{
+            margin: 0%;
+        }
+        #content-wrap {
+            padding-bottom: 2.5rem;
+            /* Footer height */
+        }
+
+        nav {
+            background-color: rgb(240, 234, 234);
+            padding: 3%;
+            font-size: 1.5rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        nav a{
+            text-decoration: none;
+        }
+
+        /* .container{
+            color: blueviolet;
+            margin-top: 3%;
+            width: 100%;
+        } */
+
+        /* Apply styles to the form container */
+        .container {
+            max-width: 400px; /* Adjust the maximum width as needed */
+            margin-top: 3%;
+        }
+
+        /* Apply styles to the form */
+            form {
+                margin-bottom: 20px;
+            }
+
+        /* Apply styles to the form input field */
+        .form-control {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .icons-1{
+            display: flex;
+            border: 1px solid none;
+			width: 60%;
+            margin-left: 20%;
+			/* margin-top: 1%; */
+            text-align: center;
+
+        }
+
+        .icons-1 div{
+            width: 20%;
+            border: 1px solid black;
+            margin-right: 3%;
+            padding: 2%;
+        }
+
+        /* Apply styles to the submit button */
+        .btn-success {
+            width: 100%; /* Make the button full width */
+        }
+    </style>
+
+    <script src="https://kit.fontawesome.com/e9fa5e156c.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -26,6 +93,22 @@
                 {% endblock content %}
             </div>
             
+        </div>
+
+        <div class = "icons-1">
+            <div class="link">
+                <i class="fa-solid fa-link"></i>
+                <p>Extremely short URLs, we have the shortest shortened URL in the market, using only 14 characters</p>
+            </div>
+            <div class="security">
+                <i class="fa-solid fa-shield-halved"></i>
+                <p>Security is a priority. HTTPS and Firewall are just a few of the many mechanisms we have</p>
+            </div>
+            <div class="free">
+                <img width="10%" src="https://icon-library.com/images/no-cost-icon/no-cost-icon-21.jpg"/>
+                <!-- <i class="fa-solid fa-shield-halved"></i> -->
+                <p>Our service is 100% free. Create as many links as you want</p>
+            </div>
         </div>
     </center>
     

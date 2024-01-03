@@ -1,9 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<style>
+    *{
+        margin-top: 0.2rem;
+    }
+    .url-container {
+        border: 1px solid #0c0c0c; /* Set the border style and color */
+        text-align: center;
+        padding: 0%;
+        margin: 0rem;
+    }
+
+    .alert.alert-primary {
+        margin-top: 2rem;
+        width: 30%;
+    }
+</style>
 <center>
     <div class="alert alert-primary" role="alert">
-        <h1>Your Short URL: "domain.com/{{ chars }}"</h1>
+        <p>Your Short URL:</p>
+        <div class="url-container">
+            <h2>domain.com/{{ chars }}</h2>
+        </div>
     </div>
 
     <div id="short-url-box" style="display: none;">
